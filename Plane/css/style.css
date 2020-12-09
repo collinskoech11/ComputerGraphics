@@ -1,0 +1,108 @@
+body {
+    background: #232b2f;
+}
+/* Actual Code for Steering and its rotation starts here. * Replace the wheel with our image. */
+.flight {
+    width: 200px;
+    height: 100px;
+    background: url("http://cdn.1001freedownloads.com/vector/thumb/84314/airliner.png") center no-repeat;
+    background-size: 100%;
+    position: fixed;
+    bottom: -8px;
+    right: 0;
+}
+.flight.run {
+    animation: landFlight linear 10s;
+}
+.runway {
+    width: 95%;
+    height: 1px;
+    border-top: 1px dotted #eee;
+    background: #333;
+    position: fixed;
+    bottom: 5px;
+    right: 0;
+}
+.runway .runwayNo {
+    position: absolute;
+    border: 1px dotted #eee;
+    width: 50px;
+    color: #fff;
+    bottom: 23px;
+    left: -30px;
+    text-align: center;
+    padding: 5px 0;
+}
+.runway .runwayNo:after {
+    position: absolute;
+    height: 20px;
+    width: 10px;
+    border: 1px dotted #fff;
+    content: '';
+    bottom: -23px;
+    left: 18px;
+}
+@keyframes landFlight {
+    0% {
+        -ms-transform: translate(0, 0) rotate(0deg);
+        -moz-transform: translate(0, 0) rotate(0deg);
+        -webkit-transform: translate(0, 0) rotate(0deg);
+        transform: translate(0, 0) rotate(0deg);
+   }
+    20% {
+        -ms-transform: translate(-400px, 0) rotate(0deg);
+        -moz-transform: translate(-400px, 0) rotate(0deg);
+        -webkit-transform: translate(-400px, 0) rotate(0deg);
+        transform: translate(-400px, 0) rotate(0deg);
+   }
+    30% {
+        -ms-transform: translate(-450px, -2px) rotate(0deg);
+        -moz-transform: translate(-450px, -2px) rotate(0deg);
+        -webkit-transform: translate(-450px, -2px) rotate(0deg);
+        transform: translate(-450px, -2px) rotate(0deg);
+   }
+    38% {
+        -ms-transform: translate(-500px, -5px) rotate(10deg);
+        -moz-transform: translate(-500px, -5px) rotate(10deg);
+        -webkit-transform: translate(-500px, -5px) rotate(10deg);
+        transform: translate(-500px, -5px) rotate(10deg);
+   }
+    39% {
+        -ms-transform: translate(-510px, -10px) rotate(15deg);
+        -moz-transform: translate(-510px, -10px) rotate(15deg);
+        -webkit-transform: translate(-510px, -10px) rotate(15deg);
+        transform: translate(-510px, -10px) rotate(15deg);
+   }
+    40% {
+        -ms-transform: translate(-520px, -12px) rotate(20deg);
+        -moz-transform: translate(-520px, -12px) rotate(20deg);
+        -webkit-transform: translate(-520px, -12px) rotate(20deg);
+        transform: translate(-520px, -12px) rotate(20deg);
+   }
+    50% {
+        -ms-transform: translate(-600px, -50px) rotate(20deg);
+        -moz-transform: translate(-600px, -50px) rotate(20deg);
+        -webkit-transform: translate(-600px, -50px) rotate(20deg);
+        transform: translate(-600px, -50px) rotate(20deg);
+   }
+    60% {
+        -ms-transform: translate(-700px, -100px) rotate(20deg);
+        -moz-transform: translate(-700px, -100px) rotate(20deg);
+        -webkit-transform: translate(-700px, -100px) rotate(20deg);
+        transform: translate(-700px, -100px) rotate(20deg);
+   }
+    100% {
+        -ms-transform: translate(-2000px, -750px) rotate(20deg);
+        -moz-transform: translate(-2000px, -750px) rotate(20deg);
+        -webkit-transform: translate(-2000px, -750px) rotate(20deg);
+        transform: translate(-2000px, -750px) rotate(20deg);
+   }
+}
+.controls button {
+    border: 0;
+    outline: 0;
+    color: #000;
+    background: lightskyblue;
+    padding: 10px;
+    cursor: pointer;
+}
